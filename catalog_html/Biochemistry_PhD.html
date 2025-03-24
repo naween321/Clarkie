@@ -1,82 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 	<head>
-		<title>Catalog Search - Clark University - Modern Campus Catalog™</title>
+		<title>Program: Biochemistry, PhD - Clark University - Modern Campus Catalog™</title>
 				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-				<link rel="shortcut icon" href="//acalog-clients.s3.amazonaws.com/production/clarku/img/favicon/favicon.ico" />
-		<meta name="description" content="Clark University Academic Catalog"><meta name="keywords" content="Clark University, academic catalog, academics, major, minor, majors and minors, course listings, courses, classes, liberal arts university, research, concentrationsa, sciences, humanities, social science, environmental science, worcester">		<link href="//acalog-clients.s3.amazonaws.com/production/clarku/css/gateway/user-styles.css" rel="stylesheet" type="text/css">
-		<link href="css/public_custom.php" rel="stylesheet" type="text/css">
-		<link href="global_styles.css?v=01252018" rel="stylesheet" type="text/css">
+							<link rel="shortcut icon" href="//acalog-clients.s3.amazonaws.com/production/clarku/img/favicon/favicon.ico" />
+		<meta name="description" content="Clark University Academic Catalog"><meta name="keywords" content="Clark University, academic catalog, academics, major, minor, majors and minors, course listings, courses, classes, liberal arts university, research, concentrationsa, sciences, humanities, social science, environmental science, worcester">			<link href="//acalog-clients.s3.amazonaws.com/production/clarku/css/gateway/user-styles.css" rel="stylesheet" type="text/css">
+			<link href="css/public_custom.php" rel="stylesheet" type="text/css">
+			<link href="global_styles.css" rel="stylesheet" type="text/css">
+					<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="ie.css" />
+			<![endif]-->
+
 				<!-- Cache-busting string (deploy date) added to asset URLS -->
 		<script src="js/jquery.js?v=01252018" type="text/javascript"></script>
 		<script src="js/Tooltip.js?v=01252018" type="text/javascript"></script>
  		<script src="javascripts.js?v=02232018" type="text/javascript"></script>
 		<script src="js/smlinks.js?v=01252018" type="text/javascript"></script>
 			<script src="/js/highlight.js?v=01252018" type="text/javascript"></script>
-		<script language="javascript">
-			function reset_pages() {
-				document.database_search.cpage.value = 1;
-				document.database_search.ppage.value = 1;
-				document.database_search.ecpage.value = 1;
-				document.database_search.spage.value = 1;
-				document.database_search.tpage.value = 1;
-				document.database_search.pcpage.value = 1;
-				document.database_search.submit();
-			}
-
-			function data_search(ipage, itype) {
-				if (itype == 27) {
-					document.database_search.ecpage.value = ipage;
-				} else if (itype == 3) {
-					document.database_search.cpage.value = ipage;
-				} else if (itype == 1) {
-					document.database_search.ppage.value = ipage;
-				} else if (itype == 31) {
-					document.database_search.pcpage.value = ipage;
-				} else if (itype == 28) {
-					document.database_search.spage.value = ipage;
-				} else if (itype == 30) {
-					document.database_search.tpage.value = ipage;
-				}
-				document.database_search.submit();
-			}
-
-			function checkInput(form) {
-				if (document.getElementById('search_keyword_field').value.replace(/(^ +| +$)/, "") == '') {
-					alert('You have not entered a search term.');
-					return false;
-				} else {
-					reset_pages();
-				}
-			}
-
-			function search_sorting(val) {
-				// Set the sorting choice cookie.
-				var today = new Date();
-				var cookie_expire_date = new Date(today.getTime() + (8 * 7 * 86400000));
-				setCookie('sorting_type', val, cookie_expire_date, '/');
-
-				$('sorting_type').value = val;
-			}
-
-			function setCookie(name, value, expires, path, domain, secure) {
-				var cookieString = name + "=" +escape(value) +
-					((expires) ? ";expires=" + expires.toGMTString() : "") +
-					((path) ? ";path=" + path : "") +
-					((domain) ? ";domain=" + domain : "") +
-					((secure) ? ";secure" : "");
-				document.cookie = cookieString;
-			}
-
-			function saveLinkInPortfolio(urlText) {
-				var reply = prompt("Please name your search.", "");
-				if (reply == null || reply == "") {
-					alert("You must name your search to Add to Portfolio.");
-				} else {
-					acalogPopup('portfolio.php?link_text='+urlText+'&link_name='+reply+'#search','portfolio',770,530,'yes');
-				}
-			}
-		</script>
 		<script type='text/javascript'>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-233406-28']);
@@ -101,29 +40,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-migrate-git.min.js"></script>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" rel="stylesheet" />
-
 		<!-- Begin Responsive -->
 						<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 				<script src="https://kit.fontawesome.com/e35e04f508.js" crossorigin="anonymous"></script>
 				<script src="mobile-js.js"></script>
 				<link href="mobile-styles.css" rel="stylesheet" type="text/css">
 						<!-- End Responsive -->
+		<script src="/js/pathways.js"></script>
 	</head>
-		<script>
-
-			function loadKeywordPlaceHolder() {
-				var search_keyword_field = document.getElementById('search_keyword_field');
-				if (document.getElementById('search_keyword_field').value.replace(/(^ +| +$)/, "") == '') {
-					document.getElementById('search_keyword_field').placeholder = "Enter a keyword or phrase";
-				}
-			};
-
-		</script>
-	<body onLoad="document.getElementById('show_options').style.display='inline'; loadKeywordPlaceHolder(); document.getElementById('course_options').style.display='none';document.getElementById('hide-prefix-list').style.display='inline';">
-		<!-- Skip to Navigation -->
-		<nav id="skip" aria-label="Skip to Main Content">
-			<a href="#select_catalog" class="skip-nav">Skip to Content</a>
-		</nav>
+	<body>
+        <!-- Skip to Navigation -->
+        <nav id="skip" aria-label="Skip to Main Content">
+            <a href="#select_catalog" class="skip-nav">Skip to Content</a>
+        </nav>
 		<table class="toplevel table_default">
 			<tr role="banner">
 				<td colspan="2" class="block_n2_and_content" id="acalog-header"><div id="acalog-client-javascript" class="acalog-custom">
@@ -927,16 +856,19 @@
 </div>
 <!-- End Client Footer --></td>
 			</tr>
-			<tr class="acalog-block-n1" role="navigation" aria-label="Get Print-friendly Page">
-										<td class="block_n1_right"><span class="n1_header">Clark University</span></td>
-						<td class="block_n1_left">&#160;&#160;&#160;</td>
-									</tr>
+			<tr class="acalog-block-n1" role="complementary">
+					<td class="block_n1_right">
+					<span class="n1_header">
+				Clark University					</span>
+				</td>
+				<td class="block_n1_left">&#160;&#160;&#160;</td>
+				</tr>
 			<tr role="main">
-								<td class="block_n2_and_content">
+					<td class="block_n2_and_content">
 					<table class="block_n2_and_content table_default">
 						<tr>
 							<!-- Begin N3 -->
-							<td class="block_n2_and_content">
+	<td class="block_n2_and_content">
 	<table class="table_default">
 		<tr>
 			<td class="block_n3_off block_n3_left">
@@ -987,111 +919,44 @@
 		<!-- End N3. -->
 						</tr>
 						<tr>
-														<td class="block_content_outer">
+								<td class="block_content_outer">
 								<table class="table_default">
 									<tr>
 										<td class="block_content" colspan="2">
-											<table class="acalog-highlight-ignore table_default">
-												<tr>
-													<td>
-														<div class="help_block float_right"><a href="help.php?catoid=34" onclick="acalogPopup('help.php?catoid=34', 'help', 770, 530, 'yes');return false;" accesskey="h" target="_blank" class="help"><strong>HELP</strong></a></div>
-														<span class="acalog_catalog_name">2024-2025 Academic Catalog</span>														<h1 id="acalog-content">Catalog Search</h1>
-																											</td>
+	<table class="table_default">
+	<tr>
+		<td colspan="4">
+			<table class="table_default">
+				<tr>
+					<td>
+						<div class="help_block" class="float_right"><a href="help.php" onclick="acalogPopup('help.php', 'help', 770, 530, 'yes');return false;" class="help acalog-highlight-ignore" target="_blank"><strong>HELP</strong></a></div>
+	<span class="acalog_catalog_name">2024-2025 Academic Catalog</span>																	<br>
+	    <h1 id="acalog-content">Biochemistry, PhD</h1>
+				<div style="float: right"><span class="print_degree_planner_link"><a href="javascript:void(0);" onclick="acalogPopup('preview_degree_planner.php?catoid=34&amp;poid=6953&amp;returnto=2847&print', 'print_preview', 770, 530, 'yes');return false;" target="_blank" title="Print Degree Planner (opens a new window)">Print Degree Planner (opens a new window)</a></span> | <a rel="nofollow" href="/preview_program.php?catoid=34&amp;poid=6953&amp;returnto=2847&amp;print" onclick="acalogPopup('/preview_program.php?catoid=34&amp;poid=6953&amp;returnto=2847&amp;print', 'print_preview', 770, 530, 'yes');return false;" target="_blank"  class="print_link acalog-highlight-ignore" alt="Text Version" title="Print-Friendly Page (opens a new window)"><span class="sr-only">Print-Friendly Page (opens a new window)</span></a></div><div class='acalog-social-media-links float_right'> </div>																</td>
+															</tr>
+															<tr>
+																<td>
+																	<hr>
+																</td>
+															</tr>
+														</table>
+		<p class="acalog-breadcrumb acalog-highlight-ignore"><img src="/return.gif" class="return-to"  alt="Return to {$returnto_text}"/> Return to: <a href="content.php?catoid=34&navoid=2847">Programs of Study</a></p>
+			<div class="program_description ">
+							</div>
+
+																</td>
 												</tr>
 												<tr>
-													<td>
-														<hr>
-													</td>
+													<td colspan="4" class="width">
+		<div class="custom_leftpad_20"><div class="acalog-core"><h2><a name="Overview"></a><a name="overview" id="core_57252"></a>Overview</h2><hr><p>The PhD program in Biochemistry offers research opportunities in a wide variety of areas, including: molecular modeling, protein chemistry, chemical biology, enzymology, cell division, signal transduction, molecular evolution, and gene expression.</p> <p>For more information, please visit the <a href="https://www.clarku.edu/departments/chemistry/phd-programs/">Chemistry Department&#8217;s Ph.D.</a> website.</p></div><div class="acalog-core"><h2><a name="ProgramRequirements"></a><a name="programrequirements" id="core_57972"></a>Program Requirements</h2><hr><p><strong>Qualifying Exams</strong><br> Students take standardized ACS exams in Analytical Chemistry, Biochemistry, Inorganic Chemistry, Organic Chemistry and Physical Chemistry to determine the student&#8217;s general level of competence and background in the disciplines. Students are required to pass 3 of the 5 exams by obtaining at least the 50<sup>th</sup> percentile. The Gustaf H. Carlson School of Chemistry and Biochemistry has compiled a guide to help study for the ACS exams. See the graduate student handbook link below.</p> <p><strong>Courses</strong><br> Students must complete a minimum of 5 x 300-level 1 credit courses and 4 x .25 credit module courses including Chem 389, Research Methods. See our course listings below.</p> <p><strong>Teaching Experience</strong><br> All graduate students are required to have at least one year of teaching experience.</p> <p><strong>Seminars</strong><br> All graduate students are required to participate in the department&#8217;s seminar series and periodically present seminars.</p> <p><strong>Qualifying Exams II</strong><br> Written exams created by the student&#8217;s Faculty Advisory Committee concentrating on the student&#8217;s area of research. Graduate students must pass these exams to advance to PhD candidacy.</p> <p><strong>Original Research Proposal</strong><br> A written research proposal in the format of an NIH or NSF grant application, presented to the department and defended before the student&#8217;s Faculty Advisory Committee.</p> <p><strong>Dissertation</strong><br> An acceptable written dissertation is presented to the department as a seminar and defended orally before the student&#8217;s committee.</p> <p>Please refer to the handbook for more details on our Ph.D. requirements. <a href="https://s28151.pcdn.co/departments/chemistry/wp-content/blogs.dir/5/files/sites/124/2023/03/Graduate-Program-Handbook-Feb-2023.pdf">Graduate Student Handbook</a></p></div><div class="acalog-core"><h2><a name="ChemistryAndBiochemistryFaculty"></a><a name="chemistryandbiochemistryfaculty" id="core_57467"></a>Chemistry and Biochemistry Faculty</h2><hr><div class="custom_leftpad_20"><div class="acalog-core"><h3><a name="Program"></a><a name="program" id="core_57468"></a>Program</h3><hr><p>Julio M. D&#8217;Arcy, Ph.D.<br> Sergio Granados-Focil, Ph.D.<br> Shuanghong Huo, Ph.D.<br> Charles Jakobsche, Ph.D.<br> Noel Lazo, Ph.D.<br> Arundhati Nag, Ph.D.<br> Luis Smith, Ph.D.<br> Donald Spratt, Ph.D.</p></div><div class="acalog-core"><h3><a name="Emeriti"></a><a name="emeriti" id="core_57469"></a>Emeriti</h3><hr><p>Daeg S. Brenner, Ph.D.<br> Karen L. Erickson, Ph.D.<br> Frederick Greenaway, Ph.D.<br> Mark Turnbull, Ph.D.</p></div><div class="acalog-core"><h3><a name="Affiliate"></a><a name="affiliate" id="core_57975"></a>Affiliate</h3><hr><p>William Royer, Ph.D.</p></div></div></div><div class="acalog-core"><h2><a name="BiochemistryMolecularBiologyCourses"></a><a name="biochemistrymolecularbiologycourses" id="core_57283"></a>Biochemistry &amp; Molecular Biology Courses</h2><hr><ul><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119361',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 328 - Molecular Genetics</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117906',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BIOL 334 - Signal Transduction</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117907',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BIOL 336 - Biology of Cancer</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119886',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 337 - Chemistry and Biology of Medicine</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117908',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BIOL 338 - Seminar in Cell Biology</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '120271',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BIOL 355 - Virology</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119922',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 364 - Biophysical Chemistry</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119553',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 366 - Biomolecular NMR</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117849',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 371 - Biochemistry I</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117918',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 372 - Biochemistry II</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119552',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 375 - Protein Chemistry</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '120375',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 376 - Chemical Biology - techniques and applications in research</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '120948',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 377 - Enzyme Reaction Mechanisms</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '119551',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">BCMB 379 - Computers in Biochemistry</a></span></li><li class="acalog-course"><span><a href="#" aria-expanded="false" onClick="showCourse('34', '117967',this, 'a:2:{s:8:~location~;s:7:~program~;s:4:~core~;s:5:~57283~;}'); return false;">CHEM 383 - Polymeric Biomaterials</a></span></li></ul></div></div>													</td>
 												</tr>
 											</table>
-																						<a name="search_database"></a>
-																						<form name="database_search" method="get" action="search_advanced.php" onSubmit="checkInput(this); return false;">
-												<input type="hidden" title="Cur Cat OID" name="cur_cat_oid" value="34">
-												<input type="hidden" title="ecpage" name="ecpage" value="1">
-												<input type="hidden" title="cpage" name="cpage" value="1">
-												<input type="hidden" title="ppage" name="ppage" value="1">
-												<input type="hidden" title="pcpage" name="pcpage" value="1">
-												<input type="hidden" title="spage" name="spage" value="1">
-												<input type="hidden" title="tpage" name="tpage" value="1">
-																								<input type="hidden" title="Search Database" name="search_database" value="Search">
-												<table class="table_default acalog-highlight-ignore ">
-													<tr>
-														<td class="th_lt nowrap">Search Options</td>
-														<td class="th_rt nowrap">&#160;</td>
-													</tr>
-													<tr>
-														<td colspan="2" class="td_dark"><p>Choose search categories to narrow or expand your search.</p></td>
-													</tr>
-													<tr role="group" aria-labelledby="search_keyword_field">
-														<td class="td_light td_first">
-															<br>
-															<input type="text" title="Search Keyword Field, required" id="search_keyword_field" name="filter[keyword]" size="40" maxlength="150" onChange="loadKeywordPlaceHolder();" value="" class="width_270" aria-required="true" required>
-															<br>
-															<span>
-																								
-															</span>
-																														<span class="show;">
-																<input type="checkbox" title="Exact Match" name="filter[exact_match]" id="exact_match" value="1" >
-																<label for="exact_match">Find whole word or phrase only.</label>
-															</span>
-															<p>
-																<input type="submit" title="Search" name="search_db" onClick="checkInput(this); return false;" value="Search">
-															</p>
-														</td>
-														<td class="td_light">
-															<br>
-															<span class="not_required">Search Categories</span><br>
-																																<script>
-
-																		function updateLocations(){
-																			var locations_in_use = 0;
-																			var selected_course = document.getElementById("filter_course").checked;
-																			var selected_program = document.getElementById("filter_program").checked;
-																			var chosen_locations_advanced_div = document.getElementById('chosen_locations_div_advanced');
-																			if ((selected_course || selected_program) && (locations_in_use !== 0)){
-																				chosen_locations_advanced_div.style.display = "";
-																			} else {
-																				chosen_locations_advanced_div.style.display = "none";
-																			}
-																		};
-
-																	</script>																		
-																	<input type="checkbox" title="Course Filter" onclick="updateLocations()" name="filter[3]" id="filter_course" value="1" >
-																	<label for="filter_course">Courses </label>
-																	<div id="show_options"><span class="prefix_box_label">[<a href="javascript:void(0);" onClick="document.getElementById('course_options').style.display = 'inline';document.getElementById('hide-prefix-list').style.display = 'inline'; document.getElementById('show_options').style.display = 'none'; $('#prefix_box table').focus(); return false;">Show prefix list.</a>]</span></div>
-																	<div id="course_options">
-																		<span class="prefix_box_label" id="hide-prefix-list">[<a href="javascript:void(0);" onClick="document.getElementById('course_options').style.display = 'none'; document.getElementById('show_options').style.display = 'inline'; return false;">Hide prefix list.</a>]</span>
-																		<br>
-																		<div class="prefix_wrap">
-																			<div id="prefix_box" class="td_dark prefix_box">
-																				<table class="table_default" tabindex="0"><tr><td><span class='.prefix_box_list'>ACCT&#160;</span></td><td><span class='.prefix_box_list'>AFRC&#160;</span></td><td><span class='.prefix_box_list'>ARAB&#160;</span></td><td><span class='.prefix_box_list'>ART&#160;</span></td><td><span class='.prefix_box_list'>ARTH&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>ARTS&#160;</span></td><td><span class='.prefix_box_list'>AS&#160;</span></td><td><span class='.prefix_box_list'>ASL&#160;</span></td><td><span class='.prefix_box_list'>ASTR&#160;</span></td><td><span class='.prefix_box_list'>BAN&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>BCMB&#160;</span></td><td><span class='.prefix_box_list'>BCOM&#160;</span></td><td><span class='.prefix_box_list'>BIOL&#160;</span></td><td><span class='.prefix_box_list'>BIOT&#160;</span></td><td><span class='.prefix_box_list'>BLAW&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>CHEM&#160;</span></td><td><span class='.prefix_box_list'>CHIN&#160;</span></td><td><span class='.prefix_box_list'>CJ&#160;</span></td><td><span class='.prefix_box_list'>CLAS&#160;</span></td><td><span class='.prefix_box_list'>CMLT&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>COMM&#160;</span></td><td><span class='.prefix_box_list'>CRES&#160;</span></td><td><span class='.prefix_box_list'>CRW&#160;</span></td><td><span class='.prefix_box_list'>CSCI&#160;</span></td><td><span class='.prefix_box_list'>CSEC&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>CYES&#160;</span></td><td><span class='.prefix_box_list'>DSCI&#160;</span></td><td><span class='.prefix_box_list'>ECON&#160;</span></td><td><span class='.prefix_box_list'>EDUC&#160;</span></td><td><span class='.prefix_box_list'>EN&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>ENG&#160;</span></td><td><span class='.prefix_box_list'>ENT&#160;</span></td><td><span class='.prefix_box_list'>ES&#160;</span></td><td><span class='.prefix_box_list'>FILM&#160;</span></td><td><span class='.prefix_box_list'>FIN&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>FREN&#160;</span></td><td><span class='.prefix_box_list'>GAME&#160;</span></td><td><span class='.prefix_box_list'>GART&#160;</span></td><td><span class='.prefix_box_list'>GCPT&#160;</span></td><td><span class='.prefix_box_list'>GENS&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>GEOG&#160;</span></td><td><span class='.prefix_box_list'>GERM&#160;</span></td><td><span class='.prefix_box_list'>GES&#160;</span></td><td><span class='.prefix_box_list'>GGRA&#160;</span></td><td><span class='.prefix_box_list'>GRK&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>HEBR&#160;</span></td><td><span class='.prefix_box_list'>HGS&#160;</span></td><td><span class='.prefix_box_list'>HIST&#160;</span></td><td><span class='.prefix_box_list'>HON&#160;</span></td><td><span class='.prefix_box_list'>HRD&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>HS&#160;</span></td><td><span class='.prefix_box_list'>HSS&#160;</span></td><td><span class='.prefix_box_list'>ID&#160;</span></td><td><span class='.prefix_box_list'>IDND&#160;</span></td><td><span class='.prefix_box_list'>IMED&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>INTL&#160;</span></td><td><span class='.prefix_box_list'>JAPN&#160;</span></td><td><span class='.prefix_box_list'>JS&#160;</span></td><td><span class='.prefix_box_list'>KOR&#160;</span></td><td><span class='.prefix_box_list'>LALS&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>LAS&#160;</span></td><td><span class='.prefix_box_list'>LAT&#160;</span></td><td><span class='.prefix_box_list'>LEAD&#160;</span></td><td><span class='.prefix_box_list'>MATH&#160;</span></td><td><span class='.prefix_box_list'>MCA&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>MFAV&#160;</span></td><td><span class='.prefix_box_list'>MGMT&#160;</span></td><td><span class='.prefix_box_list'>MIS&#160;</span></td><td><span class='.prefix_box_list'>MKT&#160;</span></td><td><span class='.prefix_box_list'>MPA&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>MSC&#160;</span></td><td><span class='.prefix_box_list'>MSCS&#160;</span></td><td><span class='.prefix_box_list'>MSDA&#160;</span></td><td><span class='.prefix_box_list'>MSEA&#160;</span></td><td><span class='.prefix_box_list'>MSIT&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>MSPM&#160;</span></td><td><span class='.prefix_box_list'>MUSC&#160;</span></td><td><span class='.prefix_box_list'>NAV&#160;</span></td><td><span class='.prefix_box_list'>NRES&#160;</span></td><td><span class='.prefix_box_list'>OM&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>PA&#160;</span></td><td><span class='.prefix_box_list'>PECO&#160;</span></td><td><span class='.prefix_box_list'>PHIL&#160;</span></td><td><span class='.prefix_box_list'>PHYS&#160;</span></td><td><span class='.prefix_box_list'>PSCI&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>PSYC&#160;</span></td><td><span class='.prefix_box_list'>QBUS&#160;</span></td><td><span class='.prefix_box_list'>SCRN&#160;</span></td><td><span class='.prefix_box_list'>SCSV&#160;</span></td><td><span class='.prefix_box_list'>SOC&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>SPAN&#160;</span></td><td><span class='.prefix_box_list'>SSJ&#160;</span></td><td><span class='.prefix_box_list'>STAT&#160;</span></td><td><span class='.prefix_box_list'>TA&#160;</span></td><td><span class='.prefix_box_list'>TMHR&#160;</span></td></tr><tr><td><span class='.prefix_box_list'>UDSC&#160;</span></td><td><span class='.prefix_box_list'>WGS&#160;</span></td></table>																			</div>
-																		</div>
-																	</div>
-																	<br>
-																																			<input type="hidden" title="Program Courses" name="filter[31]" value="1" id="program_courses">
-																																			<input type="checkbox" title="Program Filter" onclick="updateLocations()" name="filter[1]" id="filter_program" value="1" checked>
-																	<label for="filter_program">Programs </label>
-																	<br>
-																																		<input type="checkbox" title="Entity Filter" name="filter[28]" id="filter_entity" value="1" >
-																	<label for="filter_entity">Hierarchy Items</label>
-																	<br>
-																																		<input type="checkbox" title="Other Filter" name="filter[30]" id="filter_other" value="1" >
-																	<label for="filter_other">Other Content</label>
-																															</td>
-													</tr>
-													<tr>
-														<td class="td_lb"></td>
-														<td class="td_rb"></td>
-													</tr>
-												</table>
-											</form>
-																						<!-- END OF RESULTS -->
-										</td>
+	<p class="acalog-breadcrumb acalog-highlight-ignore"><img src="/return.gif" class="return-to"  alt="Return to {$returnto_text}"/> Return to: <a href="content.php?catoid=34&navoid=2847">Programs of Study</a></p><br><hr><div style="float: right">&#160;<a href="javascript:void(0);" class="acalog_top_link acalog-highlight-ignore">Back to Top</a> | <span class="print_degree_planner_link"><a href="javascript:void(0);" onclick="acalogPopup('preview_degree_planner.php?catoid=34&amp;poid=6953&amp;returnto=2847&print', 'print_preview', 770, 530, 'yes');return false;" target="_blank" title="Print Degree Planner (opens a new window)">Print Degree Planner (opens a new window)</a></span> | <a rel="nofollow" href="/preview_program.php?catoid=34&amp;poid=6953&amp;returnto=2847&amp;print" onclick="acalogPopup('/preview_program.php?catoid=34&amp;poid=6953&amp;returnto=2847&amp;print', 'print_preview', 770, 530, 'yes');return false;" target="_blank"  class="print_link acalog-highlight-ignore" alt="Text Version" title="Print-Friendly Page (opens a new window)"><span class="sr-only">Print-Friendly Page (opens a new window)</span></a></div><div class='acalog-social-media-links float_right'> </div>										</td>
 									</tr>
 								</table>
 							</td>
-																<!-- N2 goes here. -->
-									<td class="block_n2" colspan="3" id="acalog-nav">
+								<!-- N2 goes here. -->
+	<td class="block_n2" colspan="3" id="acalog-nav">
   <table class="block_n2_content links_table">
 	<tr>
 		<td role="search" aria-labelledby="n2_search_header" class="block_n2_search
@@ -1204,18 +1069,20 @@
   </table>
 		</td>
 <!-- End of N2 -->
-															</tr>
+							</tr>
 					</table>
 				</td>
-										<td class="block_border_left">&#160;&#160;&#160;</td>
-									</tr>
+					<td class="block_border_left">&#160;&#160;&#160;</td>
+				</tr>
 			<tr role="contentinfo" aria-label="Footer with copyright and information links">
-										<td class="block_footer_rb">
+					<td class="block_footer_rb">
 <div class="nobr">All <a href="/misc/catalog_list.php?catoid=34" class="footer" >catalogs</a> &#169; 2025 Clark University.</div> <div class="nobr">Powered by <a href="http://www.moderncampus.com" target="_blank" class="footer">Modern Campus Catalog™</a>.</div>
 </td>
-						<td class="block_footer_lb">&#160;&#160;&#160;</td>
-									</tr>
+				<td class="block_footer_lb">&#160;&#160;&#160;</td>
+				</tr>
 		</table>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
-	</body>
+<!-- 		<script src="js/smlinks.js" type="text/javascript"></script>
+ -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
+ 	</body>
 </html>
